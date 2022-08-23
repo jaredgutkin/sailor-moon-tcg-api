@@ -8,4 +8,6 @@ const app = express()
 //static folder
 app.use(express.static(path.join(__dirname, 'public')))
 
+app.use('/api/smtcg', require('./routes/smtcg'))
+
 app.listen(PORT, () => console.log(`running on port ${PORT}`))
